@@ -1,0 +1,20 @@
+<h4>{{ 'MARKET_DATA.HEADER' | translate }}</h4>
+<section class="quote-view">
+  <table class="table table-borderless quote-view__table">
+    <thead>
+      <h5>{{ 'MARKET_DATA.SUBHEADER' | translate }}</h5>
+    </thead>
+    <tbody>
+      <tr [class.quote-field--divider]="i % 2 === 1" *ngFor="let field of quotes[displayIndex]?.fields | keyvalue; let i = index">
+        <td class="quote-field__key">{{ ('MARKET_DATA.FIELDS.' + field.key) | translate }}</td>
+        <td class="quote-field__value" [class.quote-field--alert]="field.value.v < 0">{{ field.value.v | number:'1.0-4' }}</td>
+        <td class="quote-field__date">{{ field.value.d | date:'dd/MM/yyyy' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section class="button-bar">
+  <button class="button-bar__item" (click)="selectIndex(displayIndex - 1)" [disabled]="displayIndex < 1">{{ 'MARKET_DATA.PAGINATION.PREVIOUS' | translate }}</button>
+  <button class="button-bar__item" (click)="selectIndex(displayIndex + 1)" [disabled]="displayIndex === quotes.length - 1">{{ 'MARKET_DATA.PAGINATION.NEXT' | translate }}</button>
+</section>
+

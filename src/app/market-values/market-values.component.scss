@@ -1,0 +1,14 @@
+.quote-field {
+  &__key {
+    color: #a09f9f !important;
+  }
+  &__value, &__date {
+    font-size: 14px;
+  }
+  &--alert {
+    color: red !important;
+  }
+  &--divider {
+    border-bottom: 1px solid #d6d4d4 !important;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "MARKET_DATA": {
+    "HEADER": "Market data",
+    "SUBHEADER": "Key data",
+    "FIELDS": {
+      "LVAL_NORM": "Last",
+      "CLOSE_ADJ_NORM": "Close",
+      "NC2_PR_NORM": "Day Change %",
+      "NC2_NORM": "Day Change",
+      "VOL": "Volume",
+      "TUR": "Turnover",
+      "PY_CLOSE": "Previous Year Close",
+      "YTD_PR_NORM": "YTD %"
+    },
+    "PAGINATION": {
+      "NEXT": "Next",
+      "PREVIOUS": "Previous"
+    }
+  }
+}
